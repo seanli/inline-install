@@ -181,11 +181,13 @@ var InlineInstall = function(options) {
           if (isInstalled) {
             self.emit('success');
           } else {
-            showPrompt(options.prompt.text, options.prompt.ok, options.prompt.cancel, doInstall);
+            //showPrompt(options.prompt.text, options.prompt.ok, options.prompt.cancel, doInstall);
+            doInstall();
           }
         });
       } else {
-        showPrompt(options.prompt.text, options.prompt.ok, options.prompt.cancel, doInstall);
+        //showPrompt(options.prompt.text, options.prompt.ok, options.prompt.cancel, doInstall);
+        doInstall();
       }
     }
   };
